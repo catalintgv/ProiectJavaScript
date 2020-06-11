@@ -1,4 +1,4 @@
-CERINTE PENTRU PUNCTAJ MAXIM:
+CERINTE PENTRU PUNCTAJ MAXIM: 
 
 1. adaugare pentru fiecare telefon urmatoarele atribute (cu valorile corespunzatoare):
 	- imagine (link, iar in HTML folositi link-ul pentru a afisa imaginea)
