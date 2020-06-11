@@ -17,7 +17,7 @@ class Product {
 				<li>Pret: ${this.price}</li>
 				<li>An Aparitie: ${this.anAparitie}</li>
 				<li>Data Adaugare: ${this.dataAdaugare}</li>
-				<li>Poza:<img src =${this.image} /></li>
+				<li class="imagine"><img src= "${this.image}" alt="Imaginea nu mai exista"/></li>
 			</ul>
 		`;
 	}

@@ -12,7 +12,7 @@ APP.renderProductList = (productArray) => {
 	// pentru fiecare element din vectorul primit ca parametru
 	productArray.forEach( (elem) => {
 		// cream un produs
-		product = new Product(elem.name, elem.price, elem.anAparitie, elem.dataAdaugare);
+		product = new Product(elem.name, elem.price, elem.anAparitie, elem.dataAdaugare, elem.image);
 		// il afisam in pagina web
 		product.renderProduct();
 	});

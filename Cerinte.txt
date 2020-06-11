@@ -4,11 +4,14 @@ CERINTE PENTRU PUNCTAJ MAXIM:
 	- imagine (link, iar in HTML folositi link-ul pentru a afisa imaginea)
 	- anAparitie
 	- dataAdaugare
+
 2. adaugare butoane functionale de sortare dupa:
 	- anAparitie
 	- dataAdaugare
+
 3. afisati produsele sub forma de lista (sa aiba o bulinuta in fata)
 HINT: ul, li
+
 4. stilizati pagina (minim sa aiba un container de flexbox/grid + alte 3 elemente de CSS(ex: coloare, font, background..))
 
 // sfat fff util: incercati sa le faceti pe primele 4 pana la examen ;)

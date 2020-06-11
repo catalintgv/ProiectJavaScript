@@ -10,21 +10,21 @@ APP.products = [
 		price: 4500,
 		anAparitie: 2018,
 		dataAdaugare: '2020-05-23',
-		image: 'https://s12emagst.akamaized.net/products/17043/17042928/images/res_9252dac902adcfcb1f3af786dc312395_full.jpg'
+		image:'https://s12emagst.akamaized.net/products/17043/17042928/images/res_9252dac902adcfcb1f3af786dc312395_full.jpg'
 	},
 	{
 		name: 'Huawei P30',
 		price: 4000,
 		anAparitie: 2017,
 		dataAdaugare: '2020-04-17',
-		image: 'https://fdn2.gsmarena.com/vv/bigpic/huawei-p30.jpg'
+		image:'https://fdn2.gsmarena.com/vv/bigpic/huawei-p30.jpg'
 	},
 	{
 		name: 'Samsung S10',
 		price: 4250,
 		anAparitie: 2020,
 		dataAdaugare: '2019-11-08',
-		image: 'https://s12emagst.akamaized.net/products/20114/20113789/images/res_b35cd7697dd216fd10d252186a5a325a_full.jpg'
+		image:'https://s12emagst.akamaized.net/products/20114/20113789/images/res_b35cd7697dd216fd10d252186a5a325a_full.jpg'
 	}
 ];
 // pentru stocare persistenta(sa nu se mai piarda datele la refresh), folosim lacalStorage

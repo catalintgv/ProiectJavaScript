@@ -1,0 +1,31 @@
+body{
+    background-color: grey ;
+    font-size: 12px;
+    font-family: "Times New Roman", Times, serif;
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(https://lh3.googleusercontent.com/proxy/VHrOsFVTw2r9ytYGRCHRDFaJhB3wFyYSNAr3SnffIwf6PPxEIeuuidVFLOTWafalj6BLsPT8yTYn1QpGSkm6_8y3iKS9zko) 30 round;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li.imagine{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    height: 200px;
+    transition: 2s all;
+}
+.imagine:hover{
+    transform: scale(1.1);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
