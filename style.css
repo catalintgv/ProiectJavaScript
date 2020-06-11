@@ -12,7 +12,7 @@ ul {
     flex-direction: column;
 }
 
-li.imagine{
+imagine img{
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
@@ -20,7 +20,7 @@ li.imagine{
     height: 200px;
     transition: 2s all;
 }
-.imagine:hover{
+.imagine img:hover{
     transform: scale(1.1);
 }
 
