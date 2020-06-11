@@ -16,7 +16,7 @@ APP.products = [
 		name: 'Huawei P30',
 		price: 4000,
 		anAparitie: 2017,
-		dataAdaugare: '2020-04-17',
+		dataAdaugare: '2018-04-17',
 		image:'https://fdn2.gsmarena.com/vv/bigpic/huawei-p30.jpg'
 	},
 	{

@@ -3,6 +3,7 @@ mainPage.innerHTML += `
   <button id="sortByPrice">Sorteaza dupa pret</button>
   <button id="sortByanAparitie">Sorteaza dupa AnAparitie</button>
   <button id="sortBydataAdaugare">Sorteaza dupa dataAdaugare</button>
+  <button id="PriceFilter">Preturi peste 1000</button>
 `;
 
 // functia de sortare
@@ -33,36 +34,66 @@ function sortPhones(sortType) {
       break;
     
     case "sortByanAparitie":
-      const sortAn = APP.getProducts().sort((a, b)=>{
-        if (a.anAparitie < b.anAparitie){
+      const sortedAn = APP.getProducts().sort((elem1, elem2) => {
+        // daca primul element e mai mic, se returneaza un numar negativ
+        // ceea ce insemana ca elementele nu vor fi schimbate
+        if(elem1.anAparitie < elem2.anAparitie) {
           return -1;
-          
-        }else if (a.anAparitie > b.anAparitie){
+        // elementele sunt schimbate
+        } else if (elem1.anAparitie > elem2.anAparitie) {
           return 1;
-
-        }else{
+        // elementele raman pe loc
+        } else {
           return 0;
         }
+        // return elem1.price - elem2.price;
       });
-         
-      APP.addProducts(sortAn);
-      APP.renderProductList(sortAn);
+      // we put products in our database
+      APP.addProducts(sortedAn);
+      // then we render the sorted list
+      APP.renderProductList(sortedAn);
       break;
-
-      case 'sortBydataAdaugare':
-        const sortData = APP.getProducts().sort((elem1, elem2) => {
-          if(elem1.dataAdaugare <elem2.dataAdaugare){
-            return -1;
-          } else if (elem1.dataAdaugare > elem2.dataAdaugare) {
-            return 1;
-          } else {
-            return 0;
-          }
-        });
-        APP.addProducts(sortData);
-        APP.renderProductList(sortData);
-        break;
+    
+    case "sortBydataAdaugare":
+      const sortedDa = APP.getProducts().sort((elem1, elem2) => {
+        var a = new Date(elem1.dataAdaugare).getTime();
+        var b = new Date(elem2.dataAdaugare).getTime();
+        return a < b ? -1 : a > b ? 1 : 0
+        // daca primul element e mai mic, se returneaza un numar negativ
+        // ceea ce insemana ca elementele nu vor fi schimbate
+        // if(a < b) {
+        //   return -1;
+        // // elementele sunt schimbate
+        // } else if (a > b) {
+        //   return 1;
+        // // elementele raman pe loc
+        // } else {
+        //   return 0;
+        // }
+        // // return elem1.price - elem2.price;
+      });
+      // we put products in our database
+      APP.addProducts(sortedDa);
+      // then we render the sorted list
+      APP.renderProductList(sortedDa);
+      break;
   }
+}
+
+function PriceFilter(){
+  const priceOver10k = APP.getProducts().filter(a => a.price > 1000);
+  APP.addProducts(priceOver10k);
+  APP.renderProductList(priceOver10k);
+}
+
+// sterge element din li
+function delElement(){
+  const sterge = APP.getProducts().removeItem(this.name, APP.products)
+ 
+
+  APP.addProducts(sterge);
+  APP.renderProductList(sterge);
+
 }
 
 // cand se face click pe butonul de sortare dupa pret, se apeleaza functia de sortare
@@ -71,12 +102,22 @@ sortByPrice.addEventListener('click', function() {
   sortPhones('sortByPrice');
 })
 
-const sortAn = document.querySelector('#sortByanAparitie');
-sortAn.addEventListener('click',function(){
+const sortedAn = document.querySelector('#sortByanAparitie');
+sortedAn.addEventListener('click',function(){
   sortPhones('sortByanAparitie');
 })
 
-const sortData = document.querySelector('#sortBydataAdaugare');
-sortAn.addEventListener('click',function(){
+const sortedDa = document.querySelector('#sortBydataAdaugare');
+sortedDa.addEventListener('click',function(){
   sortPhones('sortBydataAdaugare');
+})
+
+const priceSort = document.querySelector('#PriceFilter');
+priceSort.addEventListener('click', function(){
+  PriceFilter();
+})
+
+const stergeElement = document.querySelector('#delete');
+stergeElement.addEventListener('click', function(){
+  delElement();
 })

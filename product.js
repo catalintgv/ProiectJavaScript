@@ -13,11 +13,12 @@ class Product {
 		productList.innerHTML += `
 		
 			<ul class="product">
-				<li>Nume: ${this.name}</li>
+				<li class="name">Nume: ${this.name}</li>
 				<li>Pret: ${this.price}</li>
 				<li>An Aparitie: ${this.anAparitie}</li>
 				<li>Data Adaugare: ${this.dataAdaugare}</li>
 				<li class="imagine"><img src= "${this.image}" alt="Imaginea nu mai exista"/></li>
+				<li class="delete"><input type="button" value="Sterge Inregistrare ${this.name}"></li>
 			</ul>
 		`;
 	}
