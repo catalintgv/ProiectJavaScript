@@ -87,21 +87,21 @@ function PriceFilter(){
 }
 
 // sterge element din li
-function delElement(){
+// function delElement(){
 
-  //const sterge = APP.getProducts().filter( a => a.name !== this.name);
+//   //const sterge = APP.getProducts().filter( a => a.name !== this.name);
 
-  // idx = APP.getProducts().findIndex(function(p){return p.name == this.name;});
-  // delete APP.getProducts()[idx];
+//   // idx = APP.getProducts().findIndex(function(p){return p.name == this.name;});
+//   // delete APP.getProducts()[idx];
 
-  const produse = APP.getProducts();
-  idx = produse.findIndex(function(p){return p.name == this.name;});
-  produse.splice(idx, 1);
+//   const produse = APP.getProducts();
+//   idx = produse.findIndex(function(p){return p.name == this.name;});
+//   produse.splice(idx, 1);
 
   
-  APP.addProducts(produse);
-  APP.renderProductList(produse);
-}
+//   APP.addProducts(produse);
+//   APP.renderProductList(produse);
+// }
 
 // cand se face click pe butonul de sortare dupa pret, se apeleaza functia de sortare
 const sortByPrice = document.querySelector('#sortByPrice');

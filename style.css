@@ -18,6 +18,12 @@ ul .name{
     font-size: 20px;
 }
 
+ul .delete {
+    height: 20px;
+    width: 200px;
+    background-color: burlywood;
+}
+
 .imagine img{
     border: 1px solid #ddd;
     border-radius: 4px;
