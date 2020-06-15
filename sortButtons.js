@@ -89,13 +89,11 @@ function PriceFilter(){
 // sterge element din li
 function delElement(){
 
-  const sterge = APP.getProducts().indexOf(this.name);
-  const listaNoua = APP.getProducts().splice(sterge);
-  
+  const sterge = APP.getProducts().filter( a => a.name !== this.name);
  
-
-  APP.addProducts(listaNoua);
-  APP.renderProductList(listaNoua);
+  
+  APP.addProducts(sterge);
+  APP.renderProductList(sterge);
 
 }
 
