@@ -88,11 +88,14 @@ function PriceFilter(){
 
 // sterge element din li
 function delElement(){
-  const sterge = APP.getProducts().removeItem(this.name, APP.products)
+
+  const sterge = APP.getProducts().indexOf(this.name);
+  const listaNoua = APP.getProducts().splice(sterge);
+  
  
 
-  APP.addProducts(sterge);
-  APP.renderProductList(sterge);
+  APP.addProducts(listaNoua);
+  APP.renderProductList(listaNoua);
 
 }
 
@@ -117,7 +120,7 @@ priceSort.addEventListener('click', function(){
   PriceFilter();
 })
 
-const stergeElement = document.querySelector('#delete');
+const stergeElement = document.querySelector('.delete');
 stergeElement.addEventListener('click', function(){
   delElement();
 })
