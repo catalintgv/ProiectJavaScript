@@ -1,7 +1,7 @@
 // aduagam in HTML formularul de adaugare produs
 mainPage.innerHTML += `
   <form id="addPhone">
-    Nume: <input type="text" name="phoneName">
+    Nume: <input type="text" name="phoneName" required>
     Pret: <input type="number" name="phonePrice">
     An Aparitie: <input type="number" name="phoneYear">
     Data Adaugare: <input type="date" name="phoneDate">

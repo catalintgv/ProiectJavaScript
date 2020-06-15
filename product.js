@@ -13,7 +13,7 @@ class Product {
 		productList.innerHTML += `
 		
 			<ul class="product">
-				<li class="name">Nume: ${this.name}</li>
+				<li class="name">Nume: ${this.name} required </li>
 				<li>Pret: ${this.price}</li>
 				<li>An Aparitie: ${this.anAparitie}</li>
 				<li>Data Adaugare: ${this.dataAdaugare}</li>
@@ -21,5 +21,21 @@ class Product {
 				<li class="delete"><input type="button" value="Sterge Inregistrare ${this.name}"></li>
 			</ul>
 		`;
+	
+
+
+
+		const deleteButtons = document.querySelectorAll('.delete');
+		deleteButtons.forEach(function(btn) {
+		  btn.addEventListener('click', function() {
+			const filteredArticles = APP.getProducts().filter(x => 
+			   x.name !== btn.innerText
+			); 
+	  
+			APP.addProducts(filteredArticles);
+			APP.renderProductList(filteredArticles);
+
+		  });
+		})
 	}
 }

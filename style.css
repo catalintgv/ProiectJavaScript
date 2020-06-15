@@ -12,6 +12,12 @@ ul {
     flex-direction: column;
 }
 
+ul .name{
+    color: brown;
+    font-style: bold;
+    font-size: 20px;
+}
+
 .imagine img{
     border: 1px solid #ddd;
     border-radius: 4px;

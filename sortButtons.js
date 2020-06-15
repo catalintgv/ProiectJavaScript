@@ -89,12 +89,18 @@ function PriceFilter(){
 // sterge element din li
 function delElement(){
 
-  const sterge = APP.getProducts().filter( a => a.name !== this.name);
- 
-  
-  APP.addProducts(sterge);
-  APP.renderProductList(sterge);
+  //const sterge = APP.getProducts().filter( a => a.name !== this.name);
 
+  // idx = APP.getProducts().findIndex(function(p){return p.name == this.name;});
+  // delete APP.getProducts()[idx];
+
+  const produse = APP.getProducts();
+  idx = produse.findIndex(function(p){return p.name == this.name;});
+  produse.splice(idx, 1);
+
+  
+  APP.addProducts(produse);
+  APP.renderProductList(produse);
 }
 
 // cand se face click pe butonul de sortare dupa pret, se apeleaza functia de sortare
@@ -116,9 +122,4 @@ sortedDa.addEventListener('click',function(){
 const priceSort = document.querySelector('#PriceFilter');
 priceSort.addEventListener('click', function(){
   PriceFilter();
-})
-
-const stergeElement = document.querySelector('.delete');
-stergeElement.addEventListener('click', function(){
-  delElement();
 })
